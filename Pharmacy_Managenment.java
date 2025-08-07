@@ -3,16 +3,21 @@ package Taks1;
 import java.util.HashMap;
 import java.util.Scanner;
 
+class Product{
+	
+}
+
+
 class Product2{
 	int id;
 	String name;
-	String quantity;
+	String quality;
 	int price;
-	public Product2(int id, String name, String quantity, int price) {
+	public Product2(int id, String name, String quality, int price) {
 	
 		this.id = id;
 		this.name = name;
-		this.quantity = quantity;
+		this.quality = quality;
 		this.price = price;
 		
 	}
@@ -24,8 +29,8 @@ class Product2{
 	public String getName() {
 		return name;
 	}
-	public String getQuantity() {
-		return quantity;
+	public String getQuality() {
+		return quality;
 		
 	}
 	public int getPrice() {
@@ -34,7 +39,7 @@ class Product2{
 	public void dis() {
 		System.out.println("Id of Product  : " + id);
 		System.out.println("Name of Product :" + name);
-		System.out.println("Quantity of Product :"+quantity);
+		System.out.println("Quality of Product :"+quality);
 		System.out.println("Price of Product:" + price);
 		
 		
@@ -42,13 +47,11 @@ class Product2{
 		
 		
 	}
-	
+
 	
 }
 
 public class Pharmacy_Managenment {
-
-	private static final Integer Integer = null;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -79,15 +82,15 @@ public class Pharmacy_Managenment {
 		System.out.println("Enter Name");
 		String name = sc.nextLine();
 		
-		System.out.println("Enter Quantity");
-		String quantity = sc.nextLine();
+		System.out.println("Enter Quality");
+		String quality = sc.nextLine();
 		
 		System.out.println("Enter price");
 		int price = sc.nextInt();
 		sc.nextLine();
 		
 		
-        Product2 newProduct = new Product2(id, name, quantity, price);
+        Product2 newProduct = new Product2(id, name, quality, price);
         data.put(id, newProduct);
         System.out.println("Product added successfully.");
         
@@ -103,16 +106,17 @@ public class Pharmacy_Managenment {
 			String newProductName = sc.nextLine();
 			
 			
-			System.out.println("Enter new Quantity:");
-			String newQuantity  = sc.nextLine();
+			System.out.println("Enter new quality:");
+			String newQuality  = sc.nextLine();
 			
 			System.out.println("Enter new Price:");
 			int newPrice = sc.nextInt();
 			sc.nextLine();
 			
-			Product2 newProductUp = new Product2(updateid, newProductName, newQuantity, newPrice);
+			Product2 newProductUp = new Product2(updateid, newProductName, newQuality, newPrice);
 			data.put(updateid, newProductUp);
 			System.out.println("Product updated!!");
+			
 		  }
 			
 			else {
